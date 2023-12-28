@@ -18,6 +18,7 @@ namespace Alura.Filmes.App
             using (var contexto = new AluraFilmesContexto())
             {
                 contexto.LogSQLToConsole();
+                Console.WriteLine("teste de modificacao para GitHub");
 
                 #region Codigo de envio de comando SQL direto ao BD
                 //var sql = "INSERT INTO language (name) VALUES ('Teste 1'), ('Teste 2'), ('Teste 3')";
