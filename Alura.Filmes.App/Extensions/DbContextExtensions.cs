@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 
-namespace Alura.Filmes.App.Extensions
+namespace Forms_Ver01.App.Extensions
 {
     public static class DbContextExtensions
     {

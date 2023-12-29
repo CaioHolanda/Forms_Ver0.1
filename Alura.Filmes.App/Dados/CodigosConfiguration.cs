@@ -16,11 +16,11 @@ namespace Forms_Ver01.App.Dados
 
             builder
                 .Property(a => a.Id)
-                .HasColumnName("Conta_id");
+                .HasColumnName("id");
 
             builder
                 .Property(a => a.Nome)
-                .HasColumnName("Servico")
+                .HasColumnName("Conta")
                 .HasColumnType("varchar(50)")
                 .IsRequired();
 

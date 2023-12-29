@@ -1,7 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
 
 namespace Alura.Filmes.App.Migrations
 {
@@ -13,16 +11,16 @@ namespace Alura.Filmes.App.Migrations
                 name: "Codigos",
                 columns: table => new
                 {
-                    Conta_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Conta = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Usuario = table.Column<string>(type: "varchar(50)", nullable: false),
                     Codigo = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Servico = table.Column<string>(type: "varchar(50)", nullable: false),
-                    UltimaAlteracao = table.Column<DateTime>(name: "Ultima Alteracao", type: "datetime", nullable: false),
-                    Usuario = table.Column<string>(type: "varchar(50)", nullable: false)
+                    UltimaAlteracao = table.Column<DateTime>(name: "Ultima Alteracao", type: "datetime", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Codigos", x => x.Conta_id);
+                    table.PrimaryKey("PK_Codigos", x => x.id);
                 });
         }
 

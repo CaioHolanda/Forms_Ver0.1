@@ -1,13 +1,5 @@
-﻿using Alura.Filmes.App.Dados;
-using Alura.Filmes.App.Extensions;
-using Alura.Filmes.App.Negocio;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Runtime.InteropServices;
+﻿using Forms_Ver01.App.Dados;
+using Forms_Ver01.App.Extensions;
 namespace Alura.Filmes.App
 {
     class Program
@@ -15,7 +7,7 @@ namespace Alura.Filmes.App
         
         static void Main(string[] args)
         {
-            using (var contexto = new AluraFilmesContexto())
+            using (var contexto = new CodigosContexto())
             {
                 contexto.LogSQLToConsole();
 
