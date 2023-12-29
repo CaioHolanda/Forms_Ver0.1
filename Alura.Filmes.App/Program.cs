@@ -7,9 +7,10 @@ namespace Alura.Filmes.App
         
         static void Main(string[] args)
         {
+
             using (var contexto = new CodigosContexto())
             {
-                contexto.LogSQLToConsole();
+                //contexto.LogSQLToConsole();
 
                 #region Codigo de envio de comando SQL direto ao BD
                 //var sql = "INSERT INTO language (name) VALUES ('Teste 1'), ('Teste 2'), ('Teste 3')";

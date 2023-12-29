@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Forms_Ver01_Biblioteca;
 
 namespace Alura.Filmes.App.Forms
 {
-    public partial class FormInicial : Form
+    public partial class Frm_Inicial : Form
     {
-        public FormInicial()
+        public Frm_Inicial()
         {
             InitializeComponent();
         }
