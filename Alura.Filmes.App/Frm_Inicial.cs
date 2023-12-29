@@ -17,5 +17,20 @@ namespace Alura.Filmes.App.Forms
         {
             InitializeComponent();
         }
+
+        private void conectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
