@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Password_Icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -194,6 +197,18 @@
     <Compile Include="Dados\CodigosContexto.cs" />
     <Compile Include="Dados\CodigosConfiguration.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
+    <Compile Include="Forms\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_CadastroUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CadastroUsers.Designer.cs">
+      <DependentUpon>Frm_CadastroUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Inicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +265,12 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CadastroUsers.resx">
+      <DependentUpon>Frm_CadastroUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Inicial.resx">
       <DependentUpon>Frm_Inicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,12 +285,12 @@
       <Name>Forms_Ver01_Biblioteca</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Forms\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Images\clean.png" />
     <Content Include="Images\Connect.ico" />
     <Content Include="Images\Connect.png" />
+    <Content Include="Images\delete.png" />
     <Content Include="Images\Disconnect.ico" />
     <Content Include="Images\Disconnect.png" />
     <Content Include="Images\Exit.ico" />
@@ -278,6 +299,10 @@
     <Content Include="Images\Exit_2.png" />
     <Content Include="Images\Password_Icon.ico" />
     <Content Include="Images\Password_Icon.png" />
+    <Content Include="Images\Pass_Key.png" />
+    <Content Include="Images\Register.png" />
+    <Content Include="Images\Rubber.png" />
+    <Content Include="Password_Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

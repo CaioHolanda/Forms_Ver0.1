@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Inicial));
             this.Mnu_Inicial = new System.Windows.Forms.MenuStrip();
             this.conectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Iml_Imagens = new System.Windows.Forms.ImageList(this.components);
+            this.Tbc_Aplicacoes = new System.Windows.Forms.TabControl();
             this.Mnu_Inicial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +47,7 @@
             this.sairToolStripMenuItem});
             this.Mnu_Inicial.Location = new System.Drawing.Point(0, 0);
             this.Mnu_Inicial.Name = "Mnu_Inicial";
-            this.Mnu_Inicial.Size = new System.Drawing.Size(800, 24);
+            this.Mnu_Inicial.Size = new System.Drawing.Size(356, 24);
             this.Mnu_Inicial.TabIndex = 0;
             this.Mnu_Inicial.Text = "menuStrip1";
             // 
@@ -74,12 +77,35 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // Iml_Imagens
+            // 
+            this.Iml_Imagens.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Iml_Imagens.ImageStream")));
+            this.Iml_Imagens.TransparentColor = System.Drawing.Color.Transparent;
+            this.Iml_Imagens.Images.SetKeyName(0, "Connect.png");
+            this.Iml_Imagens.Images.SetKeyName(1, "Disconnect.png");
+            this.Iml_Imagens.Images.SetKeyName(2, "Exit.png");
+            this.Iml_Imagens.Images.SetKeyName(3, "Exit_2.png");
+            this.Iml_Imagens.Images.SetKeyName(4, "Pass_Key.png");
+            this.Iml_Imagens.Images.SetKeyName(5, "Password_Icon.png");
+            this.Iml_Imagens.Images.SetKeyName(6, "Register.png");
+            // 
+            // Tbc_Aplicacoes
+            // 
+            this.Tbc_Aplicacoes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tbc_Aplicacoes.ImageList = this.Iml_Imagens;
+            this.Tbc_Aplicacoes.Location = new System.Drawing.Point(0, 24);
+            this.Tbc_Aplicacoes.Name = "Tbc_Aplicacoes";
+            this.Tbc_Aplicacoes.SelectedIndex = 0;
+            this.Tbc_Aplicacoes.Size = new System.Drawing.Size(356, 333);
+            this.Tbc_Aplicacoes.TabIndex = 1;
+            // 
             // Frm_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(356, 357);
+            this.Controls.Add(this.Tbc_Aplicacoes);
             this.Controls.Add(this.Mnu_Inicial);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Mnu_Inicial;
@@ -99,5 +125,7 @@
         private System.Windows.Forms.ToolStripMenuItem conectarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem desconectarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ImageList Iml_Imagens;
+        private System.Windows.Forms.TabControl Tbc_Aplicacoes;
     }
 }

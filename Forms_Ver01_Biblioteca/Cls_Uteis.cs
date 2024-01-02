@@ -93,6 +93,13 @@ namespace Forms_Ver01_Biblioteca
                     return ForcaDaSenha.Segura;
             }
         }
-
+        public static bool validaSenhaLogin(string senha)
+        {
+            if (senha == "123")
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
